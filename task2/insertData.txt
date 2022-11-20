@@ -1,7 +1,10 @@
 1.To create Database
 use Zen
 
-2.Insert Data in Users
+2.Create a Collection users
+db.createCollection("users")
+//Insert Data in Users
+
 db.users.insertMany([
 {
     userid:1,
@@ -26,7 +29,9 @@ db.users.insertMany([
 }
 ]);
 
-3.Insert Data in Codekata
+3.Create a Collection codekata
+  db.createCollection("codekata")
+//Insert Data in Codekata
 db.codekata.insertMany([
     {
         userid:1,
@@ -49,7 +54,9 @@ db.codekata.insertMany([
         problems_solved:20,
     }
     ]);
-    4.Insert Data in Attendance
+    4.Create a Collection Attendance
+     db.createCollection("attendance")
+   //Insert Data in Attendance
     db.attendance.insertMany([
     {
       userid: 1,
@@ -77,7 +84,10 @@ db.codekata.insertMany([
       attended: false,
     },
   ]);
-  5.Insert Data in Topics
+  5.Create a Collection Topics
+   db.createCollection("topics")
+  
+  //Insert Data in Topics
   db.topics.insertMany([
     {
       topicid: 1,
@@ -105,7 +115,9 @@ db.codekata.insertMany([
       topic_date: new Date("23-oct-2020"),
     },
   ]);
-  6.Insert Data in Tasks
+  6.Create a Collection Tasks
+   db.createCollection("tasks")
+  //Insert Data in Tasks
   db.tasks.insertMany([
     {
       taskid: 1,
@@ -149,7 +161,9 @@ db.codekata.insertMany([
     },
   ]);
   
-  7.Insert Data in Company_drives
+  7.Create a Collection Company_drives
+    db.createCollection("company_drives")
+//  Insert Data in Company_drives
   db.company_drives.insertMany([
    {
       userid: 1,
@@ -178,7 +192,9 @@ db.codekata.insertMany([
     },
   ]);
   
-  8.Insert Data in Mentors
+  8.Create a Collection Mentors
+    db.createCollection("mentors")
+   //Insert Data in Mentors
   db.mentors.insertMany([
     {
         mentorid: 1,

@@ -78,11 +78,12 @@ db.product.find({ $and : [ {product_color : 'indigo'}, {product_price : 492.00} 
 
 10)Delete the products which product price value are same
 
-db.product.aggregate([
-    {
-        $group: { _id: "$product_price",count:{$sum:1}}
-    },{
-        $match: {count:{$gt:1}}
-    }
-    ])
+db.product
+  .aggregate([
+    { $group: { _id: "$product_price", count: { $sum: 1 } } },
+    { $match: { count: { $gt: 1 } } },
+  ])
+  .forEach((doc) => {
+    db.product.remove({ "product_price": doc._id });
+  });
     
